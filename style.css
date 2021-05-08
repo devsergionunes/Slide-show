@@ -1,4 +1,4 @@
-body {
+* {
     margin:0;
     padding: 0;
     box-sizing: border-box;
@@ -11,11 +11,22 @@ header {
 }
 .header {
     height:50px;
-    background-color: #f00;
+    background: linear-gradient(to right , #0876b6 , #027a7e);
+    border-bottom: 2px solid #0876b6;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgb(79, 79, 79);
+
 }
 .slider {
     flex:1;
-    background-color: #0f0;
     overflow: hidden;
 }
 .slider-width {
@@ -31,20 +42,25 @@ header {
     background-position: center;
     background-size: cover;
 }
-.slider-controles {
+.sliders-pointers {
+    width: 100%;
+    height: 15px;
     position: absolute;
-    z-index:99;
-    width: 1140px;
-    margin: 100px;
+    margin-top: -100px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    cursor:pointer;
+    justify-content: center;
 }
-.slider-bt {
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    color:#000;
+.sliders-pointers :nth-child(1) {
+    background-color: rgb(4, 101, 192);
+}
+.pointer {
+    width: 15px;
+    height:15px ;
     border-radius: 50%;
+    margin-left: 15px;
+    border: 2px solid rgb(4, 101, 192);
+    cursor: pointer;
+}
+.pointer:hover{
+    background-color: rgb(4, 101, 192);
 }
