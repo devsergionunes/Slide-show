@@ -21,7 +21,7 @@ function gonext(n){
 setInterval( gonext , 5000)
 
 /*
-outra logica simples de se usar para atualizar a margem dos sliders é usando 'vw' ao inves de 'px'
+outra logica simples de se usar para atualizar a margem dos sliders é usando 'px' ao inves de 'vw'
 function attMargin(){
     let sliderwidth = document.querySelector('.slider-item').clientWidth
     let newMargin = (currentSlider * sliderwidth )
