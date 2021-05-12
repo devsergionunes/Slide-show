@@ -50,8 +50,8 @@ header {
     display: flex;
     justify-content: center;
 }
-.sliders-pointers :nth-child(1) {
-    background-color: rgb(4, 101, 192);
+.active {
+    background-color: #0876b6;
 }
 .pointer {
     width: 15px;
