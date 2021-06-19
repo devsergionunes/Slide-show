@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slideshow</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="header">
-            <h1>Apresentaçao de um slideshow com codigo 100% reutilizavel</h1>
-        </div>
-        <div class="slider">
-            <div class="slider-width">
-                <div class="slider-item" style="background-image: url('imagens/img1.jpg');"></div>
-                <div class="slider-item" style="background-image: url('imagens/img2.jpg');"></div>
-                <div class="slider-item" style="background-image: url('imagens/img3.jpg');"></div>
-            </div>
-        </div>
-    </header>
-    <div class="sliders-pointers"></div>
-    <section>
-        <div><h1>resto do site</h1></div>
-    </section>
 
-    <script src="script.js"></script>
+<body>
+    <div class="slide-wrapper">
+        <ul class="slide">
+            <li><img src="./imagens/cidade1.jpg" alt=""></li>
+            <li><img src="./imagens/cidade2.jpg" alt=""></li>
+            <li><img src="./imagens/cidade3.jpg" alt=""></li>
+            <li><img src="./imagens/cidade4.jpg" alt=""></li>
+            <li><img src="./imagens/cidade5.jpg" alt=""></li>
+            <li><img src="./imagens/cidade6.jpg" alt=""></li>
+            <li><img src="./imagens/cidade7.jpg" alt=""></li>
+            <li><img src="./imagens/cidade8.jpg" alt=""></li>
+        </ul>
+    </div>
+    <div class="buttons">
+        <button class="btn-prev">Prev</button>
+        <button class="btn-next">Next</button>
+    </div>
+    <script type="module" src="script.js"></script>
 </body>
+
 </html>
