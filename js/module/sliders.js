@@ -14,7 +14,7 @@ class Slide {
     };
 
     // evento criado para observar quando tiver mudança de slide e
-    // atualizar os pointer conforme mudança
+    // atualizar os pointers conforme mudança
     this.changeEventTolltip = new Event('changedtooltip');
   }
 
@@ -82,7 +82,7 @@ class Slide {
     this.onResize = Debounce(this.onResize.bind(this));
   }
 
-  // config sliders geral de navegaçao dos slides
+  // configuraçao geral de navegaçao dos slides
   positionConfig() {
     this.slideArrey = Array.from(this.slide.children).map((element) => {
       const position = this.positionSlide(element);
@@ -148,14 +148,14 @@ class Slide {
 }
 
 export default class SlideControls extends Slide {
-  // init buttons
+  // seleciona os botões e add o evento aos mesmo
   nextPrevButtons(btnPrev, BtnNext) {
     this.btnPrev = document.querySelector(btnPrev);
     this.btnNext = document.querySelector(BtnNext);
     this.addEventButtons();
   }
 
-  // toolpits imagens config
+  // configuraçao das tooltips por imagens
   creatTooltip(options) {
     let toolpits;
     if (options) {
@@ -189,20 +189,20 @@ export default class SlideControls extends Slide {
     this.wrapper.appendChild(this.tooltip);
   }
 
-  // events buttons
+  // add os eventos aos botões
   addEventButtons() {
     this.btnPrev.addEventListener('click', this.navSlidePrev);
     this.btnNext.addEventListener('click', this.navSlideNext);
   }
 
-  // event de mudança de slide para atualiza a posiçao das tooltips
+  // evento responsavel por cuidar a mudança dos slides e atualiza as tooltips
   eventupdatetooltp() {
     this.wrapper.addEventListener('changedtooltip', () => {
       Debounce(this.tooltipActive());
     });
   }
 
-  // init funcionalidades com index padrao ou que sera passado
+  // inicia as funcionalidades com index padrao ou que sera passado
   initSlideControls(index = 4) {
     this.init(index);
     this.eventupdatetooltp();
